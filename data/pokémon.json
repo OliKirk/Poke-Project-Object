@@ -1,0 +1,23 @@
+{
+  "name": "Groudon",
+  "description": "Groudon is said to be the personification of the land itself. Legends tell of its many clashes against Kyogre, as each sought to gain the power of nature.",
+  "ability": "Drought",
+  "footprint": "https://archives.bulbagarden.net/media/upload/a/a8/F0383.png",
+  "dexindex": "0383",
+  "image": "img/Groudon.png",
+  "type": "Ground",
+  "subtype": null,
+  "weaknesses": "Water Grass Ice",
+  "gender": "Unknown",
+  "weight": "950kg",
+  "height": "3.5`meters",
+  "generation": "Gen 3",
+  "spilversion": "Ruby Saphire Emerald",
+  "canEvolve": false,
+  "statsHP": 100,
+  "statsAttack": 180,
+  "statsDefence": 160,
+  "statsSpecialAttack": 150,
+  "statsSpecialDefence": 90,
+  "statsSpeed": 90
+}
