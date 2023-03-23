@@ -8,20 +8,27 @@ async function initApp() {
   viewPokémon(groudon);
 }
 
-function fetchJSON() {}
-
 async function getPokémon(url) {
   const response = await fetch(url);
   const data = await response.json();
   return data;
 }
 
-function showPokémons() {}
-
 function viewPokémon(pokémon) {
-  const myHTML = /*HTML*/ `
-  <li>Name: ${pokémon.name}</li>
-  <li>${pokémon.description}</li>
+  console.log("showPokémon");
+  const pokemonHTML = /*HTML*/ `<article class="grid-item">
+  <image src="${pokémon.image}"></image>
+  <h2>${pokémon.name}</h2>
+  <p>${pokémon.type}</p> 
+  </article>`;
+  document.querySelector("#pokémon").insertAdjacentHTML("beforeend", pokemonHTML);
+  document.querySelector("#pokémon article:last-child").addEventListener("click", clickPokémon);
+
+  function clickPokémon() {
+    document.querySelector("#pokémondetails").showModal();
+    const myHTML = /*HTML*/ `
+  <h2>Name: ${pokémon.name}</h2>
+  <h3>${pokémon.description}</h3>
   <li>${pokémon.ability}</li>
   <li><img src="${pokémon.image}"></li>
   <li><img src="${pokémon.footprint}"</li>
@@ -40,7 +47,8 @@ function viewPokémon(pokémon) {
   <li>${pokémon.statsSpecialAttack}</li>
   <li>${pokémon.atsSpecialDefence}</li>
   <li>${pokémon.statsSpeed}</li>`;
-  document.querySelector("#pokemon").insertAdjacentHTML("beforeend", myHTML);
+    document.querySelector("#pokémondetails").insertAdjacentHTML("beforeend", myHTML);
+  }
 }
 
 // name: tekst
