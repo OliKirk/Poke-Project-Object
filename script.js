@@ -31,25 +31,26 @@ function viewPokémon(pokémon) {
   function clickPokémon() {
     const myHTML = /*HTML*/ ` <article id="pokémoninfo">
   <h2>Name: ${pokémon.name}</h2>
-  <h3>${pokémon.description}</h3>
-  <li>${pokémon.ability}</li>
-  <li><img src="${pokémon.image}"></li>
-  <li><img class="footprint" src="${pokémon.footprint}"></li>
-  <li>${pokémon.dexindex}</li>
-  <li>${pokémon.type}</li>
-  <li>${pokémon.subtype}</li>
-  <li>${pokémon.weaknesses}</li>
-  <li>${pokémon.gender}</li>
-  <li>${pokémon.weight}</li>
-  <li>${pokémon.height}</li>
-  <li>${pokémon.generation}</li>
-  <li>${pokémon.spilversion}</li>
-  <li>${pokémon.canEvolve}</li>
-  <li>${pokémon.statsHP}</li>
-  <li>${pokémon.statsAttack}</li>
-  <li>${pokémon.statsSpecialAttack}</li>
-  <li>${pokémon.atsSpecialDefence}</li>
-  <li>${pokémon.statsSpeed}</li> 
+  <h3>Description: ${pokémon.description}</h3>
+  <li>Ability: ${pokémon.ability}</li>
+  <li><img class="pokémoninfo-img" src="${pokémon.image}"></li>
+  <li>Footprint: <img class="footprint" src="${pokémon.footprint}"></li>
+  <li>Dexindex: ${pokémon.dexindex}</li>
+  <li>Type: ${pokémon.type}</li>
+  <li>Subtype: ${pokémon.subtype}</li>
+  <li>Weaknesses: ${pokémon.weaknesses}</li>
+  <li>Gender: ${pokémon.gender}</li>
+  <li>Weight: ${pokémon.weight} grams</li>
+  <li>Height: ${pokémon.height} centimeters</li>
+  <li>Generation: ${pokémon.generation}</li>
+  <li>Spilversion: ${pokémon.spilversion}</li>
+  <li>Can Evolve: ${pokémon.canEvolve}</li>
+  <li>HP: ${pokémon.statsHP}</li>
+  <li>Attack: ${pokémon.statsAttack}</li>
+  <li>Defence: ${pokémon.statsDefence}</li>
+  <li>SP Attack: ${pokémon.statsSpecialAttack}</li>
+  <li>SP Defence: ${pokémon.statsSpecialDefence}</li>
+  <li>Speed: ${pokémon.statsSpeed}</li> 
   <button id="close-btn">Close</button>
   </article>`;
     document.querySelector("#pokémondetails").insertAdjacentHTML("beforeend", myHTML);
